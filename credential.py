@@ -1,39 +1,33 @@
-import sys
-import random
-import getpass
+users = {}  # Any user can log in if have an account or create an account
 
+Name: "Mchana"
+Password: "M1234"
 
-UserName: "Mchana"
-Password: "G1234"
-AccountName: "Facebook"
-status: ""
+status = ""
 
-n = str("UserName")  # user inputs name
-nam = str("")  # users name
-a = str("AccountName")  # thas is facebook or any
-acc = str("null")
-p = str("null")  # user's input start value
-pas = str("password")  # password value
+while status != "q":
+    status = input("Are you a registered user? y/n? Press q to quit: ")
 
-ans = True
+    if status == "n":  # new user
+        createLogin = input("Create login name: ")
 
-while ans:
-    question = input(
-        "Enter a value to get your account: (press enter to quit)")
+        if createLogin in users:  # check if login name exist in the list
+            print ("Login name already exist!\n")
+        else:
+            createPasswrds = input("Create password: ")
+            users[createLogin] = createPasswrds  # add login and password
+            print("\nUser created!\n")
 
-    answers = random.randint(1, 4)
+    elif status == "y":  # login the user
+        login = input("Enter login name: ")
 
-    if question == "":
-        sys.exit()
+        if login in users:
+            passw = input("Enter password: ")
+            print ("Welcome")
 
-    elif answers == 1:
-        person = input("Enter Name: ")
-        print("Valid User", person, '!')
+            if login in users and passw in users:  # login matches password
+                print ("Login successful!\n")
 
-    elif answers == 2:
-        holder = input("Account Name: ")
-        print("one more step", holder, '!               ')
-
-    elif answers == 3:
-        p = getpass.getpass("Insert your password: ")
-        print("Welcome!")
+        else:
+            print
+            print("User doesn't exist!\n")
