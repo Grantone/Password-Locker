@@ -1,3 +1,11 @@
+def create_credential(login_name, user_password, user_account):
+    '''
+    Function to create a new credential
+    '''
+    new_credential = Credential(login_name, user_password, user_account)
+    return login
+
+
 users = {}  # Any user can log in if have an account or create an account
 
 Name: "Mchana"
@@ -31,3 +39,20 @@ while status != "q":
         else:
             print
             print("User doesn't exist!\n")
+
+if login in new_user:
+    passw = input("Enter password: ")
+    print ("Welcome")
+
+              elif short_code == 'log':
+            print('enter your username')
+            user_name=input()
+            print('enter your password')
+            user_password=input()
+            respnse=login_user(user_name,user_password)
+            print(respnse)
+            if respnse==None:
+                print('wrong username or password')
+            else:
+                print('you are logged in')
+                print('\n')
