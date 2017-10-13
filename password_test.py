@@ -1,20 +1,28 @@
+from credential import Credential
 import unittest
 
 
-class TestPassword(unittest.TestCase):
+class TestCredential(unittest.TestCase):
 
-    def __init__(self, first_name, last_name, account_name, password):
+    def __init__(self, login_name, user_password, user_account):
         '''
         Args:
-        first_name: New password first name.
-        last_name: New password last name.
-        account_name: New password account name.
-        password: New password password.
+        login_name: New credential login name.
+        user_password: New credential user password.
+        user_account: New password user account.
         '''
 
         def setUp(self):
 
-            self.user_details = Password("Mchana", "Grantone", "ABC", "1234")
+            self.user_details = Password("Mchana", "G1234", "Facebook")
+
+            def test_init(self):
+                '''
+                Set up method to run before each test cases.
+                '''
+                self.assertEqual(self.user_details.login_name, "Mchana")
+                self.assertEqual(self.user_details.user_password, "G1234")
+                self.assertEqual(self.user_details.user_account, "Facebook")
 
 
 if __name__ == '__main__':
