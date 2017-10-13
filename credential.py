@@ -3,10 +3,10 @@ users = {}  # Any user can log in if have an account or create an account
 Name: "Mchana"
 Password: "M1234"
 
-status = ""
+status = "",
 
 while status != "q":
-    status = input("Are you a registered user? y/n? Press q to quit: ")
+    status = input("Do you have an account? y/n? Press q to quit: ")
 
     if status == "n":  # new user
         createLogin = input("Create login name: ")
