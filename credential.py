@@ -1,33 +1,22 @@
-users = {}  # Any user can log in if have an account or create an account
+class Credential:
+    """
+    Class that generates new instances of credentials
+    """
 
-Name: "Mchana"
-Password: "M1234"
+    credential_list = []  # Empty contact list
+    # Init method up here
 
-status = "",
+    def save_credential(self):
+        '''
+        save_credential method saves credential objects into credntial_list
+        '''
 
-while status != "q":
-    status = input("Do you have an account? y/n? Press q to quit: ")
+        Credential.credential_list.append(self)
 
-    if status == "n":  # new user
-        createLogin = input("Create login name: ")
+    def __init__(self, login_name, user_password, user_account):
 
-        if createLogin in users:  # check if login name exist in the list
-            print ("Login name already exist!\n")
-        else:
-            createPasswrds = input("Create password: ")
-            users[createLogin] = createPasswrds  # add login and password
-            print("\nUser created!\n")
+        # docstring removed for simplicity
 
-    elif status == "y":  # login the user
-        login = input("Enter login name: ")
-
-        if login in users:
-            passw = input("Enter password: ")
-            print ("Welcome")
-
-            if login in users and passw in users:  # login matches password
-                print ("Login successful!\n")
-
-        else:
-            print
-            print("User doesn't exist!\n")
+        self.login_name = login_name
+        self.user_password = user_password
+        self.user_account = user_account
