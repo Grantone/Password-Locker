@@ -13,3 +13,5 @@ def __init__(self, first_name, last_name, password):
     account_name: New password account name.
     password: New password password.
     '''
+
+    def setUp(self):
