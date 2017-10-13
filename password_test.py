@@ -26,8 +26,9 @@ class TestCredential(unittest.TestCase):
 
                 def test_save_credential(self):
                     '''
-                    To save the credential test case
+                    To save the credential test case to test if the credential object is being save in the credential list
                     '''
+                    self.assertEqual(len(Credential.credential_list))
 
 
 if __name__ == '__main__':
