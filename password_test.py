@@ -15,8 +15,7 @@ class TestPassword(unittest.TestCase):
 
         def setUp(self):
 
-            self.user_details = Password(
-                "Mchana", "Grantone", "ABC", input("Please enter your name: "))
+            self.user_details = Password("Mchana", "Grantone", "ABC", "1234")
 
 
 if __name__ == '__main__':
