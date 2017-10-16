@@ -1,3 +1,7 @@
+#!/usr/bin/env python3.6
+from credential import Credential
+
+
 def create_credential(login_name, user_password, user_account):
     '''
     Function to create a new credential
@@ -39,20 +43,23 @@ while status != "q":
         else:
             print
             print("User doesn't exist!\n")
+while status != "log":
+    status = input("Enter  Log: ")
 
-if login in new_user:
-    passw = input("Enter password: ")
-    print ("Welcome")
+    if status == "log":
+        createUsername = input("Enter Name")
+        passw = input("Enter password: ")
+        print ("Welcome")
 
-              elif short_code == 'log':
-            print('enter your username')
-            user_name=input()
-            print('enter your password')
-            user_password=input()
-            respnse=login_user(user_name,user_password)
-            print(respnse)
-            if respnse==None:
-                print('wrong username or password')
-            else:
-                print('you are logged in')
-                print('\n')
+    elif short_code == 'log':
+        print('enter your username')
+        user_name = input()
+        print('enter your password')
+        user_password = input()
+        respnse = login_user(user_name, user_password)
+        print(respnse)
+        if respnse == None:
+            print('wrong username or password')
+        else:
+            print('you are logged in')
+            print('\n')
