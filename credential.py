@@ -1,22 +1,38 @@
-class Credential:
+import unittest
+from credential import Credential
+
+
+class TestUser(unittest.TestCase)
+
+
+def setUp(self):
     """
-    Class that generates new instances of credentials
+    Class that runs every new instances of credentials
     """
+
+
+self.new_credent = Credential
+('Mchana', 'q1234', 'email')
 
     credential_list = []  # Empty contact list
     # Init method up here
 
-    def save_credential(self):
+    def setUp(self):
         '''
-        save_credential method saves credential objects into credntial_list
+        to set up all the credentials as created
         '''
 
-        Credential.credential_list.append(self)
+        self.assertEqual(self.new_credent.username, 'Mchana')
+        self.assertEqual(self.new_credent.password, 'q1234')
+        self.assertEqual(self.new_credent.account, 'email')
 
-    def __init__(self, login_name, user_password, user_account):
+    def test_save(self):
+        '''
+        Test to save the credentials created for each user
+        '''
+        self.new_credent.save_credential()
+        self.assertEqual(len(Credential.credent_list), 1)
 
-        # docstring removed for simplicity
 
-        self.login_name = login_name
-        self.user_password = user_password
-        self.user_account = user_account
+if __name__ == '__main__':
+    unittest.main()
