@@ -15,6 +15,10 @@ navigate to the directory
 Commandline
 
 
+Know Bugs:
+Some bugs yet to be solved
+
+
 
 MIT License
 
