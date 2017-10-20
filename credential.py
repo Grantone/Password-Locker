@@ -7,7 +7,7 @@ class Credential:
 
 def __init__(self,username,password,account):
     '''
-    define the properties of the class
+    class for credentials
     '''
     self.username=username
     self.password=password
@@ -15,7 +15,7 @@ def __init__(self,username,password,account):
 
 def save_credential(self):
     '''
-    method to save the credentials inputted
+    class method to save the credentials
     '''
     Credential.credent_list.append(self)
     return self.credent_list

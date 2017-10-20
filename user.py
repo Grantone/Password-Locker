@@ -17,7 +17,7 @@ class User:
 
     def register(self):
         '''
-        Method that saves a new credentials created by new user
+         Class Method that saves a new credentials created by new user
         '''
         User.users_list.append(self)
 

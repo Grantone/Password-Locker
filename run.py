@@ -1,5 +1,6 @@
 #!/usr/bin/env python3.6
 from credential import Credential
+from user import User
 
 
 def create_credential(login_name, user_password, user_account):
@@ -44,14 +45,14 @@ while status != "q":
             print
             print("User doesn't exist!\n")
 while status != "log":
-    status = input("Enter  Log: ")
+    status = input("Enter  Login: ")
 
-    if status == "log":
-        createUsername = input("Enter Name")
+    if status == "login":
+        createUsername = input("Enter Name:")
         passw = input("Enter password: ")
         print ("Welcome")
 
-    elif short_code == 'log':
+    elif short_code == 'login':
         print('enter your username')
         user_name = input()
         print('enter your password')
