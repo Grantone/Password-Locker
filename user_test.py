@@ -31,7 +31,7 @@ def test_register(self):
     self.the_user.register()
     self.assertEqual(len(User.users_list),1)
 
-    def test_login_checker(self):
+def test_login_checker(self):
     '''
     test if you can login you input the username and passord and returns true
     Args:
@@ -40,7 +40,7 @@ def test_register(self):
     self.the_user.register()
     self.the_user1.register()
 
-        to_login=User.login_checker('david','password')
+    to_login=User.login_checker('username','userpassword')
         # self.assertTrue(to_login)
     self.assertEqual(to_login,self.the_user)
 
@@ -62,8 +62,8 @@ def test_create_credentials(self):
     '''
     self.the_user.register()
     self.the_user1.register()
-        to_login=User.login_checker('mchana','userpassword')
-    self.new_cred=Credential('Grantony','david@gmail.com','123qwerty',to_login)
+    to_login=User.login_checker('username','userpassword')
+    self.new_credent=Credential('Mchana','q1234',to_login)
     self.new_cred.save_credential()
     self.assertEqual(len(Credential.credent_list),1)
 
